@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+/* selector universal */
+*{
+	box-sizing: border-box;
+	/* descuenta del width y height, lo sumado en padding y border */
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+	
+}
+
+/* Resets */
+/* agrupacion de selectores */
+ul, ol{
+	list-style: none; /* elimina la viñeta */
+	margin: 0; /* es abreviado sino seria margin top right o left bottom, se ajusta dependiendo si pones 2 3 o 4  */ 
+	padding: 0;  /* elimina el relleno, tambien tiene top, left right.. */
+
+}
+
+figure{
+	margin: 0;   /* le saca el margen al logo que lo tiene por  default */
+}
+
+/* 
+	tamaños
+		ancho-width:;
+		alto-height:;
+
+modelo de caja - box model   en una caja no puedo poner cosas mas grandes 
+	- width
+	- height
+	- padding      se suma padding se debe restar al ancho
+	- border       se lo puedo aplicar a una caja, tres caracteristicas=
+	      border-style     solid, dashed, dotted, double
+	      border-width     en pixeles
+	      border-color
+	      border:; 
+	- margin
+*/
+
+.main-header{
+	width: 1200px;
+	margin: auto;
+	padding: 20px 0;
+	border: solid 1px red;
+}
+
+.logo{
+	float: left;
+	border: solid 1px green;
+
+}
+
+.main-nav{
+	float: right;
+	border: solid 1px red;
+}
+
+/*selector descendente le aplica un estilo a algo adentro de otro para no aplicarle class al li ni a todos los li la misma caracteristica */
+
+.main-nav li{
+	float: left;
+	margin: 8px 0 0 15px;
+}
+
+.cleaner{
+	clear: both;
+}
+
+/* short hand */
+#banner{
+	background: url(../images/indexbanner-bg3.jpg) center top no-repeat;
+	background-size: cover;
+}
+
+.container{
+	width: 1200px;
+	margin: auto;
+}
+
+.banner-title{
+	font-size: 50px;
+	color: #fff;
+	padding-top: 120px;
+	margin: 0;
+}
+
+.banner-text{
+	font-size: 20px;
+	color: #fff;
+}
+
+.registrar{
+	background-color: #fff;
+	position: relative;
+	top: 30px;
+}
+
+.registrar input{
+	width: 1000px;
+	height: 60px;
+	font-size: 16px;
+	font-family: inherit;
+	float: left;
+}
+.registrar button{
+	border: none;
+	background-color: #06B4F2;
+	width: 200px;
+	height: 60px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 16px;
+	float: right;
+}
+
+.producto{
+	border: dashed 1px green;
+	width: 300px;
+	/* elijo 300 porque el conteiner total tiene 1200 dividido 4 */
+	text-align: center;
+	float: left;
+	/* para que no me quede uno abajo del otro */
+	margin-top: 100px;
+	/* para que baje eleji un valor aleatorio par aprobar */
+
+}
+
+
+
+
+
+
+
+
+
