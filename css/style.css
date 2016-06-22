@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
 
 /* selector universal */
 *{
@@ -8,83 +8,101 @@
 
 body{
 	font-family: 'Raleway', sans-serif;
-	
+	margin: 0;
+	/*
+		margin-top: ;
+		margin-right: ;
+		margin-bottom: ;
+		margin-left: ;
+	*/
+}
+img{
+	max-width: 100%;
 }
 
 /* Resets */
-/* agrupacion de selectores */
+
+/* agrupación de selectores */
 ul, ol{
 	list-style: none; /* elimina la viñeta */
-	margin: 0; /* es abreviado sino seria margin top right o left bottom, se ajusta dependiendo si pones 2 3 o 4  */ 
-	padding: 0;  /* elimina el relleno, tambien tiene top, left right.. */
-
+	margin: 0;
+	padding: 0;
+	/*
+		padding-top: ;
+		padding-right: ;
+		padding-bottom: ;
+		padding-left: ;
+	*/
 }
 
 figure{
-	margin: 0;   /* le saca el margen al logo que lo tiene por  default */
+	margin: 0;
 }
 
-/* 
+/*
 	tamaños
-		ancho-width:;
-		alto-height:;
+		ancho - width:;
+		alto - height:;
 
-modelo de caja - box model   en una caja no puedo poner cosas mas grandes 
-	- width
-	- height
-	- padding      se suma padding se debe restar al ancho
-	- border       se lo puedo aplicar a una caja, tres caracteristicas=
-	      border-style     solid, dashed, dotted, double
-	      border-width     en pixeles
-	      border-color
-	      border:; 
-	- margin
+	modelo de caja - box model
+		- width
+		- height
+		- padding
+		- border
+			border-style [solid | dashed | dotted | double]
+			border-width
+			border-color
+			border: ;
+		- margin
 */
 
 .main-header{
-	width: 1200px;
+	max-width: 1200px;
 	margin: auto;
 	padding: 20px 0;
-	border: solid 1px red;
 }
 
 .logo{
 	float: left;
-	border: solid 1px green;
+}
 
+.logo figcaption{
+	display: none;
 }
 
 .main-nav{
 	float: right;
-	border: solid 1px red;
 }
 
-/*selector descendente le aplica un estilo a algo adentro de otro para no aplicarle class al li ni a todos los li la misma caracteristica */
-
+/* selector descendiente */
 .main-nav li{
 	float: left;
-	margin: 8px 0 0 15px;
+	margin: 5px 0 0 15px;
+}
+
+.main-nav a{
+	text-decoration: none;
+	color: #222;
 }
 
 .cleaner{
 	clear: both;
 }
 
-/* short hand */
 #banner{
 	background: url(../images/indexbanner-bg3.jpg) center top no-repeat;
 	background-size: cover;
 }
 
 .container{
-	width: 1200px;
+	max-width: 1200px;
 	margin: auto;
 }
 
 .banner-title{
 	font-size: 50px;
 	color: #fff;
-	padding-top: 120px;
+	padding-top: 150px;
 	margin: 0;
 }
 
@@ -93,47 +111,447 @@ modelo de caja - box model   en una caja no puedo poner cosas mas grandes
 	color: #fff;
 }
 
-.registrar{
-	background-color: #fff;
+.register{
+	background-color: #06B4F2;
 	position: relative;
 	top: 30px;
 }
 
-.registrar input{
-	width: 1000px;
+.register input{
+	width: 83%;
 	height: 60px;
 	font-size: 16px;
+	padding: 0 15px;
 	font-family: inherit;
-	float: left;
 }
-.registrar button{
+
+.register button{
 	border: none;
 	background-color: #06B4F2;
-	width: 200px;
+	width: 16%;
 	height: 60px;
 	color: #fff;
 	font-family: inherit;
 	font-size: 16px;
-	float: right;
 }
 
 .producto{
-	border: dashed 1px green;
-	width: 300px;
-	/* elijo 300 porque el conteiner total tiene 1200 dividido 4 */
+	width: 25%;
 	text-align: center;
 	float: left;
-	/* para que no me quede uno abajo del otro */
-	margin-top: 100px;
-	/* para que baje eleji un valor aleatorio par aprobar */
+	margin-top: 8%;
+	padding: 0 15px;
+}
 
+.producto h4{
+	text-transform: uppercase;
+}
+
+.title-services{
+	text-align: center;
+	margin-top: 100px;
+	font-size: 40px;
+	margin-bottom: 0;
+}
+
+.title-services + p{
+	text-align: center;
+	margin: 0 0 100px;
+	font-size: 16px;
+}
+
+.left-services{
+	width: 33.3%;
+	float: left;
+}
+
+.left-services li{
+	position: relative;
+	text-align: right;
+	padding-right: 60px;
+	margin-bottom: 10px;
+}
+
+.left-services img{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.right-services li{
+	position: relative;
+	padding-left: 60px;
+}
+.right-services img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.cellphone{
+	width: 33.3%;
+	text-align: center;
+	float: left;
+}
+
+.right-services{
+	width: 33.3%;
+	float: left;
+}
+
+.pricing-table{
+	background: url(../images/pricing-bg.jpg) center top no-repeat;
+	background-size: contain;
+	margin-top: -100px;
+}
+
+.pricing-table h3{
+	text-align: center;
+	margin: 0;
+	padding: 50px 0 0;
+	font-size: 40px;
+}
+
+.pricing-table h3 + p{
+	text-align: center;
+}
+
+.price-table{
+	background-color: #fff;
+	box-shadow:
+		0 0 10px rgba(0,0,0,0.5)
+		/*-5px -5px 10px rgba(0,0,0,0.5) inset,
+		-5px -5px 10px red,
+		-10px -10px 10px green,
+		-15px -15px 10px orange*/
+		;
+	width: 22.5%;
+	padding: 30px;
+	float: left;
+	margin-top: 60px;
+	margin-right: 3.3%;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.price-table h4{
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.price-table h2{
+	font-size: 50px;
+	margin: 0;
+}
+
+.price-table h2 sup{
+	font-size: 20px;
+	position: relative;
+	top: 5px;
+}
+
+.price-table p{
+	margin: 0 0 30px;
+}
+
+.price-table table{
+	width: 100%;
+}
+
+.price-table td{
+	padding: 5px;
+}
+
+.price-table a{
+	display: block;
+	background-color: #26ABF6;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: 10px;
+	text-decoration: none;
+	padding: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.price-table:last-of-type{
+	margin-right: 0;
+}
+
+/*.no-margin{
+	margin: 0;
+}*/
+
+/* pseudo selectores
+
+	selector:pseudo-selector{
+		mi regla
+	}
+
+	:last-child
+
+*/
+
+
+.main-footer{
+	background-color: #233042;
+	margin-top: 80px;
+}
+
+.main-footer h3{
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	margin: 0;
+	padding: 60px 0;
+	font-weight: 400;
+	/*text-shadow:
+		3px 3px 5px black,
+		6px 6px 5px red,
+		9px 9px 5px green,
+		12px 12px 5px violet;*/
+}
+
+.main-footer h3 span{
+	color: #26ABF6;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+.bg-dark{
+	background-color: #151D27;
+	padding: 30px 0;
+}
+
+.copyright{
+	float: left;
+	margin: 10px 0 0;
+	color: #fff;
+	font-weight: 100;
+}
+
+.footer-nav{
+	float: right;
+	margin-top: 10px;
+}
+
+.footer-nav li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.footer-nav a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 100;
 }
 
 
+/* contact form */
 
+#contact-banner{
+	background: url(../images/indexbanner-bg2.jpg) center top no-repeat;
+	background-size: cover;
+}
+.contact-banner-text{
+	padding-bottom: 130px;
+	padding-left: 60px;
+	color: #fff;
+	font-size: 15px;
+}
+.contact-banner-title{
+	color: #fff;
+	font-size: 33px;
+	padding-top: 130px;
+	padding-left: 60px;
+}
+.form-title{
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 50px;
+}
+.form-text{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.form-fill{
+	width: 100%;
+}
+.form-left{
+	float: left;
+	width: 50%;
+	padding-right: 10px
+}
+.form-right{
+	float: left;
+	width: 50%;
+	padding-left: 10px;
+}
 
+.form-left input{
+	border: solid 1px grey;
+	font-size: 15px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 100%;
+	height: 60px;
+}
 
+.form-right input{
+	border: solid 1px grey;
+	font-size: 15px;
+	width: 100%;
+	height: 200px;
+}
+.form-button{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+.submit-button{
+	background-color: #46A8FF;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	width: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+}
 
+@media (max-width:800px){
+	.container, main-header {
+		width: 95%;
+	}
+	.producto{
+		width: 50%;
+		margin-top: 80px;
+	}
+	.left-services, .cellphone, .right-services {
+		float: none;
+		width: 100%;
+	}
+	.pricing-table{
+		margin-top: 0;
+	}
+	.price-table{
+		width: 48%;
+		margin-right: 4%;
+	}
+	.price-table:nth-of-type(even){
+		margin-right: 0;
+	}
+	.price-table h4{
+		font-size: 12px;
+	}
+	.price-table table{
+		font-size: 12px;
+	}
+	.copyright{
+		float: none;
+		text-align: center;
+	}
+	.footer-nav{
+		float: none;
+		text-align: center;
+		margin-top: 15px;
+	}
+}
 
+@media (max-width:600px){
 
+	.logo{
+		float: none;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	.main-nav{
+		float: none;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.main-nav li{
+		margin-bottom: 15px;
+	}
+	.banner-title{
+		display: none
+	}
+	.banner-text{
+		display: none;
+	}
+	#banner{
+		background: none;
+	}
+	.main-nav li{
+		float: none;
+	}
+	.title-services{
+		margin-bottom: 23px;
+	}
+	.right-services h3{
+		text-transform: uppercase;
+	}
+	.left-services h3{
+		text-transform: uppercase;
+	}
+	.left-services img{
+		position: absolute;
+		left: 0
+	}
+	.left-services li{
+		position: relative;
+		text-align: left;
+		padding-left: 60px;
+	}
+	.copyright{
+		float: none;
+		text-align: center;
+	}
+	.footer-nav{
+		float: none;
+		text-align: center;
+	}
+	#contact-banner{
+		display: none;
+	}
+	.form-right{
+		float: none;
+		width: 100%;
+		padding-left: 0;
+		text-align: center;
+	}
+	.form-left{
+		width: 100%;
+		padding: none;
+		text-align: center;
+	}
+	.form-left input{
+		padding: none;
+		margin-bottom: 20px;
+		margin-right: none;
+	}
 
+	.form-right input{
+		width: 100%;
+		height: 200px;
+	}
+}
+
+@media (max-width:460px){
+	.register input{
+		width: 75%;
+	}
+	.register button{
+		width: 15%;
+	}
+	.title-services{
+		font-size: 30px;
+	}
+	.producto{
+		float: none;
+		width: 100%;
+	}
+
+}
